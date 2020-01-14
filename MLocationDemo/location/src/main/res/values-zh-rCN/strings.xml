@@ -4,6 +4,8 @@
     <string name="sample_fragment">Fragment中使用</string>
     <string name="sample_service">Service使用</string>
 
+    <string name="locationManager_is_null">locationManager is null.Make sure you call super.initialize before attempting to getLocation</string>
+
     <string name="getting_location">定位获取中...</string>
     <string name="give_me_permission">请授权!</string>
     <string name="please_turn_gps_on">请打开GPS</string>
