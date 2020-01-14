@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.duan.location.LocationManager;
-import com.duan.location.R;
 import com.duan.location.configuration.LocationConfiguration;
 import com.duan.location.constants.ProcessType;
 import com.duan.location.listener.LocationListener;
@@ -29,7 +28,8 @@ public abstract class LocationBaseActivity extends AppCompatActivity implements 
         if (locationManager != null) {
             locationManager.get();
         } else {
-            throw new IllegalStateException(getString(R.string.locationManager_is_null));
+            throw new IllegalStateException("locationManager is null. "
+                    + "Make sure you call super.initialize before attempting to getLocation");
         }
     }
 

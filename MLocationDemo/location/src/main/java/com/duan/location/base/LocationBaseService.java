@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.CallSuper;
 
 import com.duan.location.LocationManager;
-import com.duan.location.R;
 import com.duan.location.configuration.LocationConfiguration;
 import com.duan.location.constants.ProcessType;
 import com.duan.location.listener.LocationListener;
@@ -36,9 +35,8 @@ public abstract class LocationBaseService extends Service implements LocationLis
         if (locationManager != null) {
             locationManager.get();
         } else {
-            throw new IllegalStateException(getString(R.string.locationManager_is_null));
-//            throw new IllegalStateException("locationManager is null. "
-//                    + "Make sure you call super.onStartCommand before attempting to getLocation");
+            throw new IllegalStateException("locationManager is null. "
+                    + "Make sure you call super.onStartCommand before attempting to getLocation");
         }
     }
 

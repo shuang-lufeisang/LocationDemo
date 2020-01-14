@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.duan.location.LocationManager;
-import com.duan.location.R;
 import com.duan.location.configuration.LocationConfiguration;
 import com.duan.location.constants.ProcessType;
 import com.duan.location.listener.LocationListener;
@@ -27,7 +26,8 @@ public abstract class LocationBaseFragment extends Fragment implements LocationL
         if (locationManager != null) {
             locationManager.get();
         } else {
-            throw new IllegalStateException(getString(R.string.locationManager_is_null));
+            throw new IllegalStateException("locationManager is null. "
+                    + "Make sure you call super.initialize before attempting to getLocation");
         }
     }
 
