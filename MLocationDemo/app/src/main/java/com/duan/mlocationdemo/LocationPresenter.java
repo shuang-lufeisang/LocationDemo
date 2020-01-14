@@ -39,44 +39,45 @@ public class LocationPresenter {
 
         switch (failType) {
             case FailType.TIMEOUT: {
-                mLocationView.setText("Couldn't get location, and timeout!");
+                mLocationView.setText(MyApplication.sApplication.getString(R.string.location_fail_timeout));
                 break;
             }
             case FailType.PERMISSION_DENIED: {
-                mLocationView.setText("Couldn't get location, because user didn't give permission!");
+                mLocationView.setText(MyApplication.sApplication.getString(R.string.location_fail_permission_de));
                 break;
             }
             case FailType.NETWORK_NOT_AVAILABLE: {
-                mLocationView.setText("Couldn't get location, because network is not accessible!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.network_not_available)));
                 break;
             }
             case FailType.GOOGLE_PLAY_SERVICES_NOT_AVAILABLE: {
-                mLocationView.setText("Couldn't get location, because Google Play Services not available!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.google_play_service_not_available)));
                 break;
             }
             case FailType.GOOGLE_PLAY_SERVICES_CONNECTION_FAIL: {
-                mLocationView.setText("Couldn't get location, because Google Play Services connection failed!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.google_play_service_connect_fail)));
                 break;
             }
             case FailType.GOOGLE_PLAY_SERVICES_SETTINGS_DIALOG: {
-                mLocationView.setText("Couldn't display settingsApi dialog!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.google_play_service_settings_denied_dialog)));
                 break;
             }
             case FailType.GOOGLE_PLAY_SERVICES_SETTINGS_DENIED: {
-                mLocationView.setText("Couldn't get location, because user didn't activate providers via settingsApi!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.google_play_service_settings_denied)));
                 break;
             }
             case FailType.VIEW_DETACHED: {
-                mLocationView.setText("Couldn't get location, because in the process view was detached!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.view_detached)));
                 break;
             }
             case FailType.VIEW_NOT_REQUIRED_TYPE: {
-                mLocationView.setText("Couldn't get location, "
-                        + "because view wasn't sufficient enough to fulfill given configuration!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.view_not_sufficient)));
+//                mLocationView.setText("Couldn't get location, "
+//                        + "because view wasn't sufficient enough to fulfill given configuration!");
                 break;
             }
             case FailType.UNKNOWN: {
-                mLocationView.setText("Ops! Something went wrong!");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.something_went_wrong)));
                 break;
             }
         }
@@ -85,15 +86,15 @@ public class LocationPresenter {
     public void onProcessTypeChanged(@ProcessType int newProcess) {
         switch (newProcess) {
             case ProcessType.GETTING_LOCATION_FROM_GOOGLE_PLAY_SERVICES: {
-                mLocationView.updateProgress("Getting Location from Google Play Services...");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.getting_location_from_google)));
                 break;
             }
             case ProcessType.GETTING_LOCATION_FROM_GPS_PROVIDER: {
-                mLocationView.updateProgress("Getting Location from GPS...");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.getting_location_from_gps)));
                 break;
             }
             case ProcessType.GETTING_LOCATION_FROM_NETWORK_PROVIDER: {
-                mLocationView.updateProgress("Getting Location from Network...");
+                mLocationView.setText((MyApplication.sApplication.getString(R.string.getting_location_from_network)));
                 break;
             }
             case ProcessType.ASKING_PERMISSIONS:
