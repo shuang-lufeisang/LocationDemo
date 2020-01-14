@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+        <string name="sample_activity">Sample In Activity</string>
+        <string name="sample_fragment">Sample In Fragment</string>
+        <string name="sample_service">Sample In Service</string>
+
+        <string name="getting_location">Getting location...</string>
+        <string name="give_me_permission">Give me the permission!</string>
+        <string name="please_turn_gps_on">Would you mind to turn GPS on?</string>
+
+        <!--    LocationPresenter    onLocationFailed(@FailType int failType) -->
+        <string name="location_fail_timeout">"Couldn't get location, and timeout!"</string>
+        <string name="location_fail_permission_de">"Couldn't get location, because user didn't give permission!"</string>
+        <string name="network_not_available">"Couldn't get location, because network is not accessible!"</string>
+        <string name="google_play_service_not_available">"Couldn't get location, because Google Play Services not available!"</string>
+        <string name="google_play_service_connect_fail">"Couldn't get location, because Google Play Services connection failed!"</string>
+        <string name="google_play_service_settings_denied_dialog" >"Couldn't display settingsApi dialog!"</string>
+        <string name="google_play_service_settings_denied" >"Couldn't get location, because user didn't activate providers via settingsApi!"</string>
+        <string name="view_detached">"Couldn't get location, because in the process view was detached!"</string>
+        <string name="view_not_sufficient">"Couldn't get location, because view wasn't sufficient enough to fulfill given configuration!"</string>
+        <string name="something_went_wrong">Ops! Something went wrong!</string>
+
+
+<!--    LocationPresenter    onProcessTypeChanged(@ProcessType int newProcess) -->
+        <string name="getting_location_from_google">Getting Location from Google Play Services...</string>
+        <string name="getting_location_from_gps">Getting Location from GPS...</string>
+        <string name="getting_location_from_network">Getting Location from Network...</string>
+
+<!--        <string name="something_went_wrong">Ops! Something went wrong!</string>-->
+</resources>

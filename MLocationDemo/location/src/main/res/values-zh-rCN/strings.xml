@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="sample_activity">Activity中使用</string>
+    <string name="sample_fragment">Fragment中使用</string>
+    <string name="sample_service">Service使用</string>
+
+    <string name="getting_location">定位获取中...</string>
+    <string name="give_me_permission">请授权!</string>
+    <string name="please_turn_gps_on">请打开GPS</string>
+
+    <!--    LocationPresenter    onLocationFailed(@FailType int failType) -->
+    <string name="location_fail_timeout">无法获取定位，超时!</string>
+    <string name="location_fail_permission_de">无法获取定位，用户未授予权限!</string>
+    <string name="network_not_available">无法获取定位，无法连接网络!</string>
+    <string name="google_play_service_not_available">无法获取定位，无法获取Google Play服务!</string>
+    <string name="google_play_service_connect_fail">无法获取定位，Google Play服务连接失败!</string>
+    <string name="google_play_service_settings_denied_dialog">无法展示设置弹窗!</string>
+    <string name="google_play_service_settings_denied">无法获取位置，用户没有激活提供者!</string>
+    <string name="view_detached">无法获取定位，视图还未加载完成！</string>
+    <string name="view_not_sufficient">无法获取位置，因为视图不足以满足给定的配置!</string>
+    <string name="something_went_wrong">糟糕，有一些问题!</string>
+
+    <!--    LocationPresenter    onProcessTypeChanged(@ProcessType int newProcess) -->
+    <string name="getting_location_from_google">正在通过Google Play服务获取定位...</string>
+    <string name="getting_location_from_gps">正在通过GPS获取定位...</string>
+    <string name="getting_location_from_network">正在通过网络获取定位...</string>
+
+</resources>
